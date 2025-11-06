@@ -63,7 +63,7 @@ try {
         }
     }
     unset($p);
-
+    
     // Return products as JSON
     header('Content-Type: application/json');
     echo json_encode([
@@ -71,7 +71,7 @@ try {
         'products' => $products,
         'count' => count($products)
     ]);
-
+    
 } catch (Exception $e) {
     error_log("Error in db_products.php: " . $e->getMessage());
     header('Content-Type: application/json');
